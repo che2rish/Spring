@@ -38,7 +38,7 @@ public class BoardController {
 		ModelAndView mav = new ModelAndView();
 		try {
 			if(!board.getFile().isEmpty()) {
-				String path = servletContext.getRealPath("/boardupload");
+				String path = servletContext.getRealPath("/boardupload/");
 				File destFile = new File(path + board.getFile().getOriginalFilename());
 				board.setBoard_file(board.getFile().getOriginalFilename());
 				board.getFile().transferTo(destFile);
